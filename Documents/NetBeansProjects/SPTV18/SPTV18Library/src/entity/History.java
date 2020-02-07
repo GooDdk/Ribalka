@@ -36,14 +36,12 @@ public class History implements Serializable{
 
     public History() {
     }
-
     public History(Book book, Reader reader, Date giveOutBook, Date returnBook) {
         this.book = book;
         this.reader = reader;
         this.giveOutBook = giveOutBook;
         this.returnBook = returnBook;
     }
-    
     public Long getId() {
         return id;
     }
@@ -51,7 +49,6 @@ public class History implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
-    
     public Book getBook() {
         return book;
     }
@@ -95,12 +92,12 @@ public class History implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.id);
-        hash = 59 * hash + Objects.hashCode(this.book);
-        hash = 59 * hash + Objects.hashCode(this.reader);
-        hash = 59 * hash + Objects.hashCode(this.giveOutBook);
-        hash = 59 * hash + Objects.hashCode(this.returnBook);
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.id);
+        hash = 67 * hash + Objects.hashCode(this.book);
+        hash = 67 * hash + Objects.hashCode(this.reader);
+        hash = 67 * hash + Objects.hashCode(this.giveOutBook);
+        hash = 67 * hash + Objects.hashCode(this.returnBook);
         return hash;
     }
 
@@ -133,5 +130,8 @@ public class History implements Serializable{
         }
         return true;
     }
+
+    
+    
     
 }

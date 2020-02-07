@@ -30,8 +30,8 @@ public class App {
         //saver = new SaverToFile();
         saver = new SaverToBase();
         books.addAll(saver.loadBooks());
-        readers.addAll(saver.loadReaders());
-        histories.addAll(saver.loadHistories());
+//        readers.addAll(saver.loadReaders());
+//        histories.addAll(saver.loadHistories());
     }
     
     public void run(){

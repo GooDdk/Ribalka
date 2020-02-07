@@ -41,7 +41,6 @@ public class Reader implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
-    
     public String getFirstname() {
         return firstname;
     }
@@ -74,10 +73,10 @@ public class Reader implements Serializable{
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 47 * hash + Objects.hashCode(this.id);
-        hash = 47 * hash + Objects.hashCode(this.firstname);
-        hash = 47 * hash + Objects.hashCode(this.lastname);
-        hash = 47 * hash + Objects.hashCode(this.phone);
+        hash = 17 * hash + Objects.hashCode(this.id);
+        hash = 17 * hash + Objects.hashCode(this.firstname);
+        hash = 17 * hash + Objects.hashCode(this.lastname);
+        hash = 17 * hash + Objects.hashCode(this.phone);
         return hash;
     }
 
@@ -108,4 +107,6 @@ public class Reader implements Serializable{
         return true;
     }
 
+    
+    
 }

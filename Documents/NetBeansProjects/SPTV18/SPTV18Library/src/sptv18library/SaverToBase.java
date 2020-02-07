@@ -17,11 +17,11 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author User
+ * @author user
  */
 public class SaverToBase implements Saveble{
-   private EntityManager em;
-   private EntityTransaction tx;
+    private EntityManager em;
+    private EntityTransaction tx;
 
     public SaverToBase() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SPTV18LibraryPU");
@@ -49,38 +49,22 @@ public class SaverToBase implements Saveble{
 
     @Override
     public void saveReaders(List<Reader> readers) {
-        for(Reader reader : readers){
-            if(reader.getId() == null){
-                tx.begin();
-                    em.persist(reader);
-                tx.commit();
-            }
-        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public List<Reader> loadReaders() {
-        List<Reader> readers = em.createQuery("SELECT reader FROM Reader reader")
-                .getResultList();
-        return readers;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void saveHistories(List<History> histories) {
-        for(History history : historys){
-            if(history.getId() == null){
-                tx.begin();
-                    em.persist(history);
-                tx.commit();
-            }
-        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public List<History> loadHistories() {
-        List<History> historys = em.createQuery("SELECT history FROM History history")
-                .getResultList();
-        return historys;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
+    
 }

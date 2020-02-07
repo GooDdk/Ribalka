@@ -18,8 +18,8 @@ import javax.persistence.Id;
  */
 @Entity
 public class Book implements Serializable{
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String author;
@@ -37,11 +37,9 @@ public class Book implements Serializable{
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public String getTitle() {
         return title;
     }
@@ -73,11 +71,11 @@ public class Book implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.id);
-        hash = 41 * hash + Objects.hashCode(this.title);
-        hash = 41 * hash + Objects.hashCode(this.author);
-        hash = 41 * hash + this.publishedYear;
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.id);
+        hash = 83 * hash + Objects.hashCode(this.title);
+        hash = 83 * hash + Objects.hashCode(this.author);
+        hash = 83 * hash + this.publishedYear;
         return hash;
     }
 
@@ -108,5 +106,7 @@ public class Book implements Serializable{
         return true;
     }
 
+    
+    
     
 }

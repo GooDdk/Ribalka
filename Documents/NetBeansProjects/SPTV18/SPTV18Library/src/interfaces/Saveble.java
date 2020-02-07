@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author User
+ * @author user
  */
 public interface Saveble {
     public void saveBooks(List<Book>books);
