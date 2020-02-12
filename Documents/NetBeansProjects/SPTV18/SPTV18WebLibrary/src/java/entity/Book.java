@@ -14,16 +14,18 @@ public class Book implements Serializable {
     private String title;
     private String author;
     private int publishedYear;
-    private int bookNum;
+    private int count;
+    private int quantity;
 
-    public Book() {
-    }
-
-    public Book(String title, String author, int publishedYear, int bookNum) {
+    public Book(String title, String author, int publishedYear, int quantity) {
         this.title = title;
         this.author = author;
         this.publishedYear = publishedYear;
-        this.bookNum = bookNum;
+        this.quantity = quantity;
+        this.count = quantity;
+    }
+
+    public Book() {
     }
 
     public Long getId() {
@@ -58,27 +60,36 @@ public class Book implements Serializable {
         this.publishedYear = publishedYear;
     }
 
-    public int getBookNum() {
-        return bookNum;
+    public int getCount() {
+        return count;
     }
 
-    public void setBookNum(int bookNum) {
-        this.bookNum = bookNum;
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override
     public String toString() {
-        return "Book{" + "id=" + id + ", title=" + title + ", author=" + author + ", publishedYear=" + publishedYear + ", bookNum=" + bookNum + '}';
+        return "Book{" + "id=" + id + ", title=" + title + ", author=" + author + ", publishedYear=" + publishedYear + ", count=" + count + ", quantity=" + quantity + '}';
     }
-    
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.id);
-        hash = 83 * hash + Objects.hashCode(this.title);
-        hash = 83 * hash + Objects.hashCode(this.author);
-        hash = 83 * hash + this.publishedYear;
-        hash = 83 * hash + this.bookNum;
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.id);
+        hash = 59 * hash + Objects.hashCode(this.title);
+        hash = 59 * hash + Objects.hashCode(this.author);
+        hash = 59 * hash + this.publishedYear;
+        hash = 59 * hash + this.count;
+        hash = 59 * hash + this.quantity;
         return hash;
     }
 
@@ -97,7 +108,10 @@ public class Book implements Serializable {
         if (this.publishedYear != other.publishedYear) {
             return false;
         }
-        if (this.bookNum != other.bookNum) {
+        if (this.count != other.count) {
+            return false;
+        }
+        if (this.quantity != other.quantity) {
             return false;
         }
         if (!Objects.equals(this.title, other.title)) {
@@ -111,5 +125,6 @@ public class Book implements Serializable {
         }
         return true;
     }
+
     
 }

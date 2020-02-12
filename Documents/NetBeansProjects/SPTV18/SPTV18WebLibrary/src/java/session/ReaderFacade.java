@@ -12,12 +12,12 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author User
+ * @author user
  */
 @Stateless
 public class ReaderFacade extends AbstractFacade<Reader> {
 
-    @PersistenceContext(unitName = "SPTV18webLibraryPU")
+    @PersistenceContext(unitName = "SPTV18WebLibraryPU")
     private EntityManager em;
 
     @Override
