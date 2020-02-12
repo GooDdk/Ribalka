@@ -15,8 +15,14 @@
     <body>
         <h1>Hello SPTV18!</h1>
         <p>${info}</p>
+        
+        <p>
+            <a href="showLogin">Вход</a><br>
+            <a href="listBooks">Список книг</a><br>
+            <a href="listReaders">Список читателей</a><br>
+        </p>
     <c:forEach var="book" items="${listBooks}">
-    <li>${book.title}. ${book.author}. ${book.publishedYear}. ${book.count}</li>
+        <li>${book.title+1}. ${book.author}. ${book.publishedYear}. ${book.count}</li>
     </c:forEach>
     </body>
 </html>
