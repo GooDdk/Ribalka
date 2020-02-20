@@ -44,9 +44,9 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         switch (request.getServletPath()) {
             case "/index":
-                request.setAttribute("info", "Привет из IndexServlet");
                 request.getRequestDispatcher("/index.jsp")
                         .forward(request, response);
                 break;
@@ -77,7 +77,8 @@ public class LoginServlet extends HttpServlet {
                     request.setAttribute("info", "Привет "+login);
                 } else{
                     request.setAttribute("info", "Неправелньный логин или пароль");
-                }   request.getRequestDispatcher("/index")
+                }   
+                request.getRequestDispatcher("/index")
                         .forward(request, response);
                 break;
         }

@@ -13,16 +13,16 @@
         <title>Сетевая библиотека группы SPTV18</title>
     </head>
     <body>
-        <h1>Hello SPTV18!</h1>
-        <p>${info}</p>
-        
+        <h1>Сетевая библиотека</h1>
+        <p id="info">${info}</p>
         <p>
             <a href="showLogin">Вход</a><br>
-            <a href="listBooks">Список книг</a><br>
+            <a href="listBooks">Cписок книг</a><br>
             <a href="listReaders">Список читателей</a><br>
+            <a href="showNewBook">Добавить новую книгу</a><br>
+            <a href="showNewReader">Зарегистрировать читателя</a><br>
+            <a href="showTakeBook">Выдать книгу</a><br>
+            <a href="showReturnBook">Вернуть книгу</a><br>
         </p>
-    <c:forEach var="book" items="${listBooks}">
-        <li>${book.title+1}. ${book.author}. ${book.publishedYear}. ${book.count}</li>
-    </c:forEach>
     </body>
 </html>
