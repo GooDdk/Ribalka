@@ -25,6 +25,7 @@
         </select>
             <br>
             <button type="submit">Вернуть выбранную книгу</button>
+            <a href="index">Назад</a><br>
         </form>
     </body>
 </html>
