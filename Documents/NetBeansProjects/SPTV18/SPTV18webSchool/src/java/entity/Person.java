@@ -15,17 +15,19 @@ public class Person implements Serializable{
     private Long id;
     private String name;
     private String lastName;
+    private String person;
     private int isikukood;
     
     public Person() {
     }
 
-    public Person(String name, String lastName, int isikukood) {
+    public Person(String name, String lastName, String person, int isikukood) {
         this.name = name;
         this.lastName = lastName;
+        this.person = person;
         this.isikukood = isikukood;
     }
-    
+
     public Long getId() {
         return id;
     }
@@ -50,6 +52,14 @@ public class Person implements Serializable{
         this.lastName = lastName;
     }
 
+    public String getPerson() {
+        return person;
+    }
+
+    public void setPerson(String person) {
+        this.person = person;
+    }
+
     public int getIsikukood() {
         return isikukood;
     }
@@ -57,19 +67,20 @@ public class Person implements Serializable{
     public void setIsikukood(int isikukood) {
         this.isikukood = isikukood;
     }
-
+    
     @Override
     public String toString() {
-        return "Person{" + "name=" + name + ", lastname=" + lastName + ", isikukood=" + isikukood + '}';
+        return "Person{" + "name=" + name + ", lastName=" + lastName + ", person=" + person + ", isikukood=" + isikukood + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.id);
-        hash = 83 * hash + Objects.hashCode(this.name);
-        hash = 83 * hash + Objects.hashCode(this.lastName);
-        hash = 83 * hash + this.isikukood;
+        hash = 11 * hash + Objects.hashCode(this.id);
+        hash = 11 * hash + Objects.hashCode(this.name);
+        hash = 11 * hash + Objects.hashCode(this.lastName);
+        hash = 11 * hash + Objects.hashCode(this.person);
+        hash = 11 * hash + this.isikukood;
         return hash;
     }
 
@@ -94,11 +105,15 @@ public class Person implements Serializable{
         if (!Objects.equals(this.lastName, other.lastName)) {
             return false;
         }
+        if (!Objects.equals(this.person, other.person)) {
+            return false;
+        }
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
         return true;
     }
+    
     
     
 }

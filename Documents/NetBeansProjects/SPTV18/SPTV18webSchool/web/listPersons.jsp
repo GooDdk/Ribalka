@@ -15,7 +15,7 @@
     <body>
         <h1>Список Учеников/Учетелей:</h1>
         <c:forEach var="reader" items="${listReaders}" varStatus="status">
-            <li>${status.index+1}. ${reader.firstname}. ${reader.lastname}. Телефон: ${reader.phone}</li>
+            <li>${status.index+1}. ${reader.name}. ${reader.lastName}. ${reader.isikukood}. ${reader.person}</li>
         </c:forEach>
     </body>
 </html>

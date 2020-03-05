@@ -15,10 +15,10 @@
         <h1>Добавить ученика/учителя</h1>
         <p id="info">${info}</p>
         <form action="addPerson" method="POST">
-            Имя: <input type="text" name="firstname" value="${firstname}"><br>
-            Фамилия: <input type="text" name="lastname" value="${lastname}"><br>
-            Телефон: <input type="text" name="phone" value="${phone}"><br>
-            Ученик/Учитель: <input type="text" name="phone" value="${phone}"><br>
+            Имя: <input type="text" name="name" value="${name}"><br>
+            Фамилия: <input type="text" name="lastName" value="${lastName}"><br>
+            Исикукод: <input type="text" name="isikukood" value="${isikukood}"><br>
+            Ученик/Учитель: <input type="text" name="person" value="${person}"><br>
             <button type="submit">Добавить</button>
         </form>
     </body>
