@@ -14,6 +14,7 @@ class Menu {
             System.out.println("exit - Выход.");
             System.out.println("start - Рыбачить.");
             System.out.println("inv - Инвентарь.");
+            System.out.println("shop - Магазин.");
             System.out.println("Введите команду: ");
             Scanner scn = new Scanner(System.in);
             String task = scn.next().toLowerCase();
@@ -31,6 +32,10 @@ class Menu {
                 case "inv":
                     Inventory inventory = new Inventory();
                     inventory.inventory();
+                    break;
+                case "shop":
+                    Shop shop = new Shop();
+                    shop.shop();
                     break;
                 default:
                     System.out.println("Неверная команда!");

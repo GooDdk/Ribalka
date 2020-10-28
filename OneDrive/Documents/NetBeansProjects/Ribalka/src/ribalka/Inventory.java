@@ -1,15 +1,17 @@
 package ribalka;
 
-
 public class Inventory {
     
+    public static int money;
+    public static int fuga;
+    public static int shuka;
+    public static int losos;
+    
     public void inventory(){
-        int fuga = 0;
-        int shuka = 0;
-        int losos = 0;
         
         System.out.println("");
         System.out.println("------ Инвентарь ------");
+        System.out.println("Деньги: " + money);
         System.out.println("Рыба:");
         System.out.println("Фуга - " + fuga);
         System.out.println("Щука - " + shuka);

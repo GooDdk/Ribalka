@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Fishing {
     
     public void fishing(){
+        Inventory inventory = new Inventory();
         boolean repeat = true;
         int fishingRodHp = 10;
         
@@ -25,15 +26,19 @@ public class Fishing {
                 case "f":
                     Random rnd = new Random();
                     int fish = rnd.nextInt(3) + 1;
+                    fishingRodHp--;
                     switch (fish){
                         case 1:
                             System.out.println("Вы поймали Фугу.");
+                            inventory.fuga++;
                         break;
                         case 2:
                             System.out.println("Вы поймали Щуку.");
+                            inventory.shuka++;
                         break; 
                         case 3:
                             System.out.println("Вы поймали Лосося.");
+                            inventory.losos++;
                         break;
                     }
                 break;
@@ -41,8 +46,6 @@ public class Fishing {
                     System.out.println("Неверная команда!");
                 break;
             }
-            
-            fishingRodHp--;
             
             if(fishingRodHp <= 0){
                 System.out.println("Удочка сломалась =(");
