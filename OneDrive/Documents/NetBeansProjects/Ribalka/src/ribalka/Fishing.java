@@ -8,7 +8,6 @@ public class Fishing {
     public void fishing(){
         Inventory inventory = new Inventory();
         boolean repeat = true;
-        int fishingRodHp = 10;
         
         do{ 
             System.out.println("");
@@ -26,7 +25,7 @@ public class Fishing {
                 case "f":
                     Random rnd = new Random();
                     int fish = rnd.nextInt(3) + 1;
-                    fishingRodHp--;
+                    inventory.fishingRodHp--;
                     switch (fish){
                         case 1:
                             System.out.println("Вы поймали Фугу.");
@@ -47,11 +46,11 @@ public class Fishing {
                 break;
             }
             
-            if(fishingRodHp <= 0){
+            if(inventory.fishingRodHp <= 0){
                 System.out.println("Удочка сломалась =(");
                 repeat=false;
             }else{
-                System.out.println("Прочность удочки: " + fishingRodHp + " HP");
+                System.out.println("Прочность удочки: " + inventory.fishingRodHp + " HP");
             }
             
         }while(repeat);           
